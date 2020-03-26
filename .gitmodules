@@ -1,0 +1,4 @@
+[submodule "buerro"]
+	path = buerro
+	url = git@github.com:Ovakefali13/buerro.git
+        branch = frontend_backend
