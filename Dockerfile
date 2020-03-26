@@ -31,7 +31,7 @@ COPY /buerro/ /usr/src/app/
 COPY /main.sh /usr/src/app/main.sh 
 WORKDIR /usr/src/app
 
-#RUN virtualenv /venv/  -p 3.7
+ENV PY_VERSION 3
 RUN make install
 
 ENV BACKEND_PORT 8081
@@ -39,4 +39,4 @@ ENV FRONTEND_PORT 8080
 EXPOSE 8080
 
 #CMD ./main.sh
-CMD /bin/sh
+CMD ["sh", "main.sh"]
