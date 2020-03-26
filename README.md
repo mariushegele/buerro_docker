@@ -2,6 +2,7 @@
 # Instructions
 
 ```
+git submodule update --init --recursive
 docker build -t buerro
 docker run -p 49160:8080 -d buerro
 ```
