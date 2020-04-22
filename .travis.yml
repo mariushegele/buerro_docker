@@ -3,6 +3,7 @@ services:
     - docker
 
 before_install:
+    - sed -i 's/git@github.com:/https:\/\/github.com\//' .gitmodules
     - git submodule update --init --remote --recursive
     - docker build -t buerro .
 
