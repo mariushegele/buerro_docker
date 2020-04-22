@@ -13,19 +13,12 @@ ENV TZ=Europe/Berlin
 RUN rm -rf /var/cache/apk/*
 
 # Install necessary libs
-RUN apk add py3-pip python3-dev make gcc musl-dev libffi-dev libxml2-dev libxslt-dev libressl-dev
+RUN apk add py3-pip python3-dev make gcc musl-dev libffi-dev libxml2-dev libxslt-dev libressl-dev git vim
 
 # Install python dependencies
 RUN pip3 install --upgrade pip
 RUN pip3 install virtualenv
 
-#USER root
-#RUN apt-get update
-#RUN apt-get -y install curl gnupg
-#RUN curl -sL https://deb.nodesource.com/setup_12.x  | bash -
-#RUN apt-get -y install nodejs
-
-#RUN apt-get update || : && apt-get install python -y
 
 COPY /buerro/ /usr/src/app/ 
 COPY /main.sh /usr/src/app/main.sh 
