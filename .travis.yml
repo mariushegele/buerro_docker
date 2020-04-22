@@ -8,7 +8,7 @@ before_install:
     - docker build -t buerro .
 
 script:
-    - docker exec -it buerro make test
+    - docker run -it buerro make test
 
 git:
     submodules: false
